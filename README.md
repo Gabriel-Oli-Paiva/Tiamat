@@ -6,7 +6,11 @@
 
 <img src="Imagens README/Brasão com frase.jpg "/>
 
-**Resumo :** Este projeto investiga se é possível identificar o gênero musical de uma faixa do Spotify com aprendizado de máquina a partir apenas de características numéricas do áudio e de sua repercussão na plataforma, como dançabilidade, energia, acústica, andamento e popularidade. O conjunto de dados traz uma grande quantidade de faixas distribuídas em muitos gêneros de forma balanceada. Na primeira parte, os modelos são otimizados com o Optuna e avaliados no problema original, com todos os gêneros. Na segunda parte, discute-se por que reduzir o número de classes pode ser vantajoso, e os gêneros são agrupados em famílias musicais, a divisão é refeita e os modelos são treinados novamente com os hiperparâmetros já encontrados, sem nova otimização, o que permite comparar os dois cenários com cuidado, já que o acerto ao acaso muda quando há menos classes.
+**Imagem gerada por I.A.**
+
+## Resumo
+
+Este projeto investiga se é possível identificar o gênero musical de uma faixa do Spotify com aprendizado de máquina a partir apenas de características numéricas do áudio e de sua repercussão na plataforma, como dançabilidade, energia, acústica, andamento e popularidade. O conjunto de dados traz uma grande quantidade de faixas distribuídas em muitos gêneros de forma balanceada. Na primeira parte, os modelos são otimizados com o Optuna e avaliados no problema original, com todos os gêneros. Na segunda parte, discute-se por que reduzir o número de classes pode ser vantajoso, e os gêneros são agrupados em famílias musicais, a divisão é refeita e os modelos são treinados novamente com os hiperparâmetros já encontrados, sem nova otimização, o que permite comparar os dois cenários com cuidado, já que o acerto ao acaso muda quando há menos classes.
 
 **Modelos Utilizados:**
 
@@ -32,8 +36,8 @@
 6. **Validação cruzada:** utilização de `StratifiedGroupKFold` agrupado por `track_id` na otimização, para preservar a proporção dos gêneros em cada partição.
 7. **Avaliação final:** comparação dos modelos no conjunto de teste independente, com análise de acurácia, precisão e revocação por gênero.
 8. **Agrupamento em famílias musicais:** redução do número de classes a partir do parentesco entre os gêneros, conferido pelos artistas mais frequentes de cada rótulo, com nova divisão treino/teste.
-9. **Novo treinamento:** treinamento dos mesmos modelos nas famílias com os hiperparâmetros já encontrados, sem nova otimização, e comparação com o cenário original pelo ganho sobre o baseline, com acurácia balanceada e F1 macro.
-
+9. **Novo treinamento:** treinamento dos mesmos modelos nas famílias com os hiperparâmetros já encontrados, sem nova otimização, e comparação com o cenário original pelo ganho sobre o baseline.
+10. **Conclusão** Interpretação dos resultados obtidos
 
 ## O Dataset:
 
@@ -48,7 +52,7 @@ ele pode ser consultado em <https://www.kaggle.com/datasets/maharshipandya/-spot
 
 Tem nomeados o Cabeçalho, Rodapé e Brasão com a frase utilizado aqui no README
 
-**Pasta TIAMAT**
+**Pasta "TIAMAT":**
 
 **dataset_musicas.csv** tem a base de dados utilizadas
 
@@ -56,7 +60,13 @@ Tem nomeados o Cabeçalho, Rodapé e Brasão com a frase utilizado aqui no READM
 
 **optuna_generos_musicais.Db** é o arquivo que contém os registros das otimizações de Hiperparâmetros, deve estar na mesma pasta do notebook para que a otimização não tenha que ocorrer novamente
 
+**cache_avaliacao_teste.joblib** carrega as informações dos treinamentos dos modelos com 114 classes de forma a não ser necessário treinar novamente caso esteja na mesma pasta do notebook
 
+**cache_avaliacao_teste_20_familias.joblib** carrega as informações dos treinamentos dos modelos com 20 famílias de forma a não ser necessário treinar novamente caso esteja na mesma pasta do notebook
+
+## Agradecimentos
+
+Ao professor Dr. Daniel R. Cassar pelos conhecimentos transmitidos em aula e pelos materias didáticos fornecidos, aos colegas de sala e amigos Vinícius Marianno, Gustavo Colas, Matheus Mendes, Filipi Martins, Pedro Sá e Heloisa Cano pelas contribuições por meio de ideias e apoios ao longo do projeto.
 
 ## Professor
 
