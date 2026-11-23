@@ -56,7 +56,7 @@ Tem nomeados o Cabeçalho, Rodapé e Brasão com a frase utilizado aqui no READM
 
 **dataset_musicas.csv** tem a base de dados utilizadas
 
-**TIAMAT.ipynb** é o arquivo que contém o desenvolvimento do trablaho, com os códigos, explicações e interpretações.
+**TIAMAT_musical.ipynb** é o arquivo que contém o desenvolvimento do trablaho, com os códigos, explicações e interpretações.
 
 **optuna_generos_musicais.Db** é o arquivo que contém os registros das otimizações de Hiperparâmetros, deve estar na mesma pasta do notebook para que a otimização não tenha que ocorrer novamente
 
