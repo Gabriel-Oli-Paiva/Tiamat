@@ -1,6 +1,6 @@
 <img src="Imagens README/Cabecalho.png"/>
 
-**Aluno** Gabriel de Oliveira Paiva
+**Aluno :** Gabriel de Oliveira Paiva
 
 <h1 align="center">TIAMAT</h1>
 
